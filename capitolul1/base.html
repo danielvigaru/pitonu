@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pitonu - Capitolul 1</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/buton.css">
+  <link rel="stylesheet" href="../css/text.css">
+  <script src="../script/interaction.js"></script>
+</head>
+
+<body>
+
+  <div class="grid-container grid-container-info" id="container">
+
+    <div class="bg-gradient">
+      <grid-item id="meniu" class="pos1 card">
+        <div class="text nume-capitol-container">
+          Introducere în Python
+        </div>
+        <div class="text">
+          <a onclick="replaceContent('./lectia1.html', 'lectia1')" href="#" id="lectia1">Ce este
+            Python?</a>
+          <a onclick="replaceContent('./lectia2.html', 'lectia2')" href="#" id="lectia2">Ce poate face Python?</a>
+          <a onclick="replaceContent('./lectia3.html', 'lectia3')" href="#" id="lectia3">De ce Python?</a>
+        </div>
+        <div class="text link-pagina-principala">
+          <a href="../index.html">Pagina principală</a>
+        </div>
+      </grid-item>
+    </div>
+
+    <div class="bg-gradient bg-gradient-info">
+      <div class="card lesson-card text" style="align-items: center;">
+
+
+        <div class="lesson" id="lesson">
+          <!-- CONTENT IS LOADED HERE -->
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+
+</body>
+
+</html>

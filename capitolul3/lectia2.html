@@ -1,0 +1,133 @@
+<text>
+  <p>Gestionarea fișierelor este o parte importantă a oricărei aplicații.</p>
+  <p>Python are mai multe funcții pentru crearea, citirea, actualizarea și ștergerea fișierelor.</p>
+</text>
+
+<subtitlu>Manipularea fișierelor</subtitlu>
+
+<text>
+  <p>Funcția cheie pentru lucrul cu fișiere în Python este funcția <code>open()</code>.</p>
+  <p>Funcția <code>open()</code> ia doi parametri: numele fișierului și modul de deschidere.</p>
+  <p>Există patru metode diferite pentru deschiderea unui fișier:
+    <ul>
+      <li>
+        <code>'r'</code> - Citire - Valoare implicită. Deschide un fișier pentru citire, aruncă excepție dacă
+        fișierul nu există.
+      </li>
+      <li>
+        <code>'a'</code> - Adăugare - Deschide un fișier pentru anexare, creează fișierul dacă nu există.
+      </li>
+      <li>
+        <code>'w'</code> - Scriere - Deschide un fișier pentru scriere, creează fișierul dacă nu există.
+      </li>
+      <li>
+        <code>'x'</code> - Creare - Creează fișierul specificat, returnează o eroare dacă fișierul există.
+      </li>
+    </ul>
+  </p>
+
+  <p>Puteți specifica dacă fișierul trebuie tratat ca binar sau text.
+    <ul>
+      <li>
+        <code>'t'</code> - Text - Valoare implicită. Mod text.
+      </li>
+      <li>
+        <code>'b'</code> - Binar - Mod binar (ex. imagini).
+      </li>
+    </ul>
+  </p>
+
+</text>
+
+<subtitlu>Sintaxă</subtitlu>
+
+<text>
+  <p>Pentru a deschide un fișier pentru citire este suficient să specificați numele fișierului:</p>
+  <img loading=lazy src="./lectia2/img1.webp">
+
+  <p>Codul de mai sus este la fel ca următorul:</p>
+  <img loading=lazy src="./lectia2/img2.webp">
+
+  <p>După ce s-a terminat lucrul cu fișierul în cauză, trebuie închis cu <code>close()</code>.</p>
+  <img loading=lazy src="./lectia2/img3.webp">
+
+  <p>Alternativ, se poate deschide cu <code>with</code>, care închide automat fișierul la întâlnirea
+    finalului structurii:</p>
+  <img loading=lazy src="./lectia2/img4.webp">
+</text>
+
+<subtitlu>Citirea unei părți din fișier</subtitlu>
+<text>
+  <p>În mod implicit, metoda <code>read()</code> returnează întregul text, dar puteți specifica câte
+    caractere doriți să returnați:</p>
+  <img loading=lazy src="./lectia2/img5.webp">
+</text>
+
+<subtitlu>Citirea rând cu rând</subtitlu>
+<text>
+  <p>Puteți returna o linie utilizând metoda <code>readline()</code>:</p>
+  <img loading=lazy src="./lectia2/img6.webp">
+
+  <p>Utilizând un loop puteți citi rând cu rând întreg fișierul.</p>
+  <img loading=lazy src="./lectia2/img7.webp">
+</text>
+
+<subtitlu>Scrierea într-un fișier existent</subtitlu>
+<text>
+  <p>
+    Pentru a scrie într-un fișier existent, trebuie să adăugați un parametru la funcția <code>open()</code>:
+    <ul>
+      <li>
+        <code>'a'</code> - Adăugare - va fi atașat la sfârșitul fișierului.
+      </li>
+      <li>
+        <code>'w'</code> - Scriere - va suprascrie orice conținut existent.
+      </li>
+    </ul>
+  </p>
+
+  <p>Deschidem <code>fisier.txt</code> și îi adaugăm o linie:</p>
+  <img loading=lazy src="./lectia2/img8.webp">
+
+  <p>Deschidem <code>fisier.txt</code> și îl suprascriem:</p>
+  <img loading=lazy src="./lectia2/img9.webp">
+</text>
+
+<subtitlu>Crearea de noi fișiere</subtitlu>
+<text>
+  <p>Pentru a crea un fișier nou în Python, utilizați metoda <code>open()</code>, cu unul dintre următorii
+    parametri:</p>
+  <ul>
+    <li>
+      <code>'x'</code> - Creare - va crea un fișier, returnează o eroare dacă fișierul există.
+    </li>
+    <li>
+      <code>'a'</code> - Adăugă - va crea un fișier dacă fișierul specificat nu există.
+    </li>
+    <li>
+      <code>'w'</code> - Scrie - va crea un fișier dacă fișierul specificat nu există.
+    </li>
+  </ul>
+  <img loading=lazy src="./lectia2/img10.webp">
+</text>
+
+<subtitlu>Ștergerea fișierelor</subtitlu>
+<text>
+  <p>Pentru a șterge un fișier trebuie importat modulul <code>OS</code>, apoi se rulează
+    <code>os.remove()</code>.</p>
+  <img loading=lazy src="./lectia2/img11.webp">
+
+  <p>Pentru a evita erorile, este de preferat să verificați dacă fișierul există înainte să-l încercați, să-l
+    ștergeți.</p>
+  <img loading=lazy src="./lectia2/img12.webp">
+</text>
+
+<subtitlu>Ștergerea folderelor</subtitlu>
+<text>
+  <p>Pentru a șterge un întreg folder, utilizați metoda <code>os.rmdir()</code>:</p>
+  <img loading=lazy src="./lectia2/img13.webp">
+  <p>Puteți elimina numai folderele goale!</p>
+</text>
+
+
+<br><br>

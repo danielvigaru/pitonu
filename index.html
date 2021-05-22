@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pitonu - Home</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/button.css">
+  <script src="./script/interaction.js"></script>
+</head>
+
+<body>
+
+  <div class="grid-container" id="container">
+
+    <div class="bg-gradient">
+      <grid-item id="card1" class="pos1 card">
+        <div class="text title">capitolul 1</div>
+      </grid-item>
+    </div>
+
+    <div class="bg-gradient">
+      <grid-item id="card2" class="pos2 card">
+        <div class="text title">capitolul 2</div>
+      </grid-item>
+    </div>
+
+    <div class="bg-gradient">
+      <grid-item id="card3" class="pos3 card">
+        <div class="text title">capitolul 3</div>
+      </grid-item>
+    </div>
+
+    <div class="bg-gradient">
+      <grid-item id="card4" class="pos4 card">
+        <div class="text title">echipa</div>
+      </grid-item>
+    </div>
+
+    <div class="bg-gradient bg-gradient-info hidden">
+      <div class="card info-card text info-text hidden" id="info">
+
+        <div id="cap1" class="hidden">
+
+          <content>
+            <h3>Introducere în Python</h3>
+            <ul>
+              <li>Ce este Python?</li>
+              <li>Ce poate face Python?</li>
+              <li>De ce Python?</li>
+            </ul>
+          </content>
+
+          <div class='button-container'>
+            <a href='./capitolul1/base.html'>
+              <button>Continuă la lecție</button>
+            </a>
+          </div>
+        </div>
+
+        <div id="cap2" class="hidden">
+          <content>
+            <h3>Bazele Python</h3>
+            <table>
+              <tbody>
+                <tr>
+                  <td>
+                    <ul>
+                      <li>Sintaxa</li>
+                      <li>Variabile</li>
+                      <li>Tipuri de date</li>
+                      <li>Casting</li>
+                    </ul>
+                  </td>
+                  <td>
+                    <ul>
+                      <li>Șiruri de caractere</li>
+                      <li>Structura if</li>
+                      <li>For loop</li>
+                      <li>While loop</li>
+                    </ul>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+          </content>
+
+          <div class='button-container'>
+            <a href='./capitolul2/base.html'>
+              <button>Continuă la lecție</button>
+            </a>
+          </div>
+        </div>
+
+        <div id="cap3" class="hidden">
+
+          <content>
+            <h3>OOP în Python</h3>
+            <ul>
+              <li>Funcții</li>
+              <li>Lucru cu fișiere</li>
+              <li>Clase</li>
+            </ul>
+          </content>
+
+          <div class='button-container'>
+            <a href='./capitolul3/base.html'>
+              <button>Continuă la lecție</button>
+            </a>
+          </div>
+        </div>
+
+        <div id="echipa" class="hidden">
+          <div class="bg-gradient bg-gradient-echipa image-txt-container flex-echipa">
+            <img src="./img/doritomi.png">
+            <div class="flex-info-membru">
+              <nume>Tomița Dorian Ștefan</nume>
+              <parte>CONTENT</parte>
+            </div>
+          </div>
+
+          <div class="bg-gradient bg-gradient-echipa image-txt-container">
+            <img src="./img/roxana.png">
+            <div class="flex-info-membru">
+              <nume>Vasile Roxana Andreea</nume>
+              <parte>CONTENT, DESIGN</parte>
+            </div>
+          </div>
+
+          <div class="bg-gradient bg-gradient-echipa image-txt-container">
+            <img src="./img/grs.webp">
+            <div class="flex-info-membru">
+              <nume>Vigaru Daniel Cristian</nume>
+              <parte>CODING, DESIGN</parte>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+</body>
+
+</html>

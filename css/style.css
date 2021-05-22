@@ -1,0 +1,288 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;1,200&display=swap');
+
+:root {
+  --text-color: white;
+  --background-color: #222222;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+ul {
+  margin-top: 0.2em;
+  margin-bottom: 1em;
+}
+
+li {
+  padding-top: 0.2em;
+}
+
+body {
+  margin: 0;
+  overflow: hidden;
+  background-color: var(--background-color);
+  transition: all 0.6s ease-in-out;
+}
+
+td {
+  padding: 0 0.6em;
+}
+
+
+a {
+  text-decoration: none;
+}
+
+code {
+  font-family: 'JetBrains Mono';
+  color: red;
+  font-variant-ligatures: none;
+}
+
+.grid-container {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr;
+  align-items: center;
+  grid-template-areas: "pos1 pos2 pos3 pos4";
+}
+
+.grid-container-info {
+  grid-template-areas: "pos1 info info info";
+}
+
+.pos1 {
+  grid-area: pos1;
+}
+
+.pos2 {
+  grid-area: pos2;
+}
+
+.pos3 {
+  grid-area: pos3;
+}
+
+.pos4 {
+  grid-area: pos4;
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  border-radius: 4em;
+  transition: 0.4s;
+  background-color: var(--background-color);
+  transition: 0.4s;
+  overflow: hidden;
+}
+
+.card:hover {
+  height: 85vh;
+  cursor: pointer;
+}
+
+.info-card {
+  border-radius: 1.5em;
+}
+
+.lesson-card {
+  overflow: scroll;
+  overflow-x: hidden;
+  align-items: baseline;
+}
+
+.lesson-card:hover {
+  cursor: default;
+}
+
+.info-card:hover {
+  cursor: default;
+  height: 80vh;
+}
+
+.bg-gradient {
+  border-radius: 2em;
+  padding: 0.2rem;
+  margin: 2em;
+  box-shadow: 0 0px 20px rgba(0, 0, 0, 0.3);
+  position: relative;
+  background: var(--gradient);
+  transition: 0.4s;
+}
+
+.bg-gradient-echipa {
+  padding: 0em;
+  margin: 1em;
+  border-radius: 1em;
+}
+
+.bg-gradient-info {
+  grid-area: info;
+  background: var(--gradient-reverse);
+}
+
+.hidden {
+  opacity: 0;
+  transition: 0.4s;
+  pointer-events: none;
+  width: 0px;
+  height: 0px;
+  overflow: hidden;
+  position: absolute;
+  left: -999em;
+}
+
+.image-txt-container {
+  display: flex;
+  /* align-items: flex-start; */
+  color: var(--culoare_text_buton);
+}
+
+.image-txt-container img {
+  height: clamp(2em, 2.5em, 3em);
+  border-radius: 25%;
+  display: flex;
+  flex-direction: column;
+  background-size: cover;
+  box-shadow: 0 0px 20px rgba(0, 0, 0, 0.5);
+  margin: 0.3em;
+}
+
+.image-txt-container nume {
+  font-family: Montserrat;
+  font-size: 0.7em;
+  margin-bottom: 0.5rem;
+}
+
+.image-txt-container parte {
+  font-size: 0.5em;
+  font-style: italic;
+}
+
+.current_lesson {
+  border-radius: 1em;
+  border: 1px solid white;
+  transition: .4s;
+  font-weight: 500;
+}
+
+.pos1 a {
+  padding: 0.5em;
+  color: var(--text-color);
+  text-decoration: none;
+  display: block;
+  margin-bottom: 0.5em;
+  width: 100%;
+}
+
+.pos1 a:hover {
+  background: var(--gradient);
+  color: var(--culoare_text_buton);
+  border-radius: 10px;
+}
+
+.nume-capitol-container {
+  position: absolute;
+  top: 5%;
+  font-size: 1.5em;
+  text-align: center;
+  width: 70%;
+}
+
+.link-pagina-principala {
+  width: 70%;
+  display: flex;
+  position: absolute;
+  bottom: 5%;
+  align-items: center;
+  text-align: center;
+  font-size: .8em;
+}
+
+.lesson {
+  display: flex;
+  flex-direction: column;
+  padding-top: 1em;
+  width: 80%;
+}
+
+.lesson img {
+  max-width: 500px;
+  height: auto;
+}
+
+content h3 {
+  display: flex;
+  justify-content: center;
+}
+
+.text {
+  font-family: Montserrat, Calibri, sans-serif;
+  transition: 0.4s;
+  user-select: none;
+  color: var(--text-color);
+}
+
+.text a {
+  font-size: 1.4em;
+}
+
+.title {
+  text-transform: uppercase;
+  font-size: 3em;
+  transform: rotate(-90deg);
+  text-align: center;
+}
+
+.info-text {
+  font-size: 3em;
+}
+
+.lesson text {
+  text-align: justify;
+  font-size: 1.3em;
+}
+
+.lesson subtitlu {
+  font-size: 2em;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+@media only screen and (max-height:768px) {
+  .title {
+    font-size: 2.4em;
+  }
+
+  .info-text {
+    font-size: 2em;
+  }
+
+  .nume-capitol-container {
+    font-size: 1em;
+  }
+
+  .text a {
+    font-size: 1em;
+  }
+}
+
+.flex-echipa {
+  display: flex;
+}
+
+.flex-info-membru {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  padding-right: 1em;
+  padding-left: 1em;
+  justify-content: center;
+}
