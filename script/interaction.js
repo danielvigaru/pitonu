@@ -61,9 +61,9 @@ window.onload = function () {
 
 }
 
-var highlightCard = function (e) {
+let highlightCard = function (e) {
   // primeste ca argument ceva event idk, trebuie pentru detectarea carui card s-a apasat
-  var clickedElement = e.target || e.srcElement; // elementul pe care s-a dat click
+  let clickedElement = e.target || e.srcElement; // elementul pe care s-a dat click
 
   if (clickedElement.classList.contains('title')) {
     // daca am dat click pe textul din card selecteaza cardul
@@ -123,7 +123,7 @@ var highlightCard = function (e) {
   }
 }
 
-var showAllCards = function () {
+let showAllCards = function () {
   for (let i = 1; i <= 4; i++) {
     let id = 'card' + i
     // toate cardurile sunt afisate si ordonate
